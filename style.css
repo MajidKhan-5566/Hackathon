@@ -1,0 +1,576 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles for the navigation bar */
+.navbar-brand img {
+    max-width: 120px; /* Logo size for large screens */
+    height: auto;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px; /* Default font size */
+    margin-left: 20px; /* Space between links */
+}
+/* Adjustments for tablets and smaller devices */
+@media (max-width: 768px) {
+    .navbar-brand img {
+        max-width: 100px; /* Smaller logo for tablets */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 16px; /* Smaller font size for tablets */
+        margin-left: 10px;
+    }
+}
+
+/* Adjustments for mobile devices */
+@media (max-width: 576px) {
+    .navbar-brand img {
+        max-width: 80px; /* Smaller logo for mobile */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 14px; /* Smaller font size for mobile */
+        margin-left: 0; /* Reset margin */
+    }
+
+    .btn-dark {
+        font-size: 14px; /* Adjust button size */
+        padding: 5px 10px; /* Adjust button padding */
+    }
+}
+
+/* Main banner styles */
+.main-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    background-color: white; /* Optional background color */
+}
+
+.inner-banner {
+    flex: 1;
+    margin: 20px;
+}
+
+.banner-heading h2 {
+    font-size: 50px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.banner-text p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.banner-btn {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.banner-btn:hover {
+    background-color: #333;
+}
+
+.banner-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures proper scaling */
+    margin: 20px;
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 768px) {
+    .banner-heading h2 {
+        font-size: 35px;
+    }
+
+    .banner-text p {
+        font-size: 16px;
+    }
+
+    .banner-btn {
+        font-size: 14px;
+        width: 200px;
+    }
+
+    .inner-banner {
+        margin: 10px;
+    }
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 576px) {
+    .main-banner {
+        flex-direction: column; /* Stacks content vertically */
+        text-align: center;
+    }
+
+    .banner-heading h2 {
+        font-size: 28px;
+    }
+
+    .banner-text p {
+        font-size: 14px;
+    }
+
+    .banner-btn {
+        font-size: 14px;
+        width: 180px;
+    }
+
+    .banner-image img {
+        margin: 0 auto;
+    }
+}
+
+/* Card group container */
+.card-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+    gap: 20px; /* Add space between cards */
+    padding: 20px;
+}
+
+/* Individual card styles */
+.card {
+    flex: 1;
+    max-width: 30%; /* Default width for desktop */
+    border: 1px solid #ddd; /* Optional border */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Add hover effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Image styling */
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Ensure images fit well */
+}
+
+/* Card text styling */
+.card-body {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 768px) {
+    .card-group {
+        gap: 15px;
+    }
+
+    .card {
+        max-width: 45%; /* Two cards per row on tablets */
+    }
+
+    .card-text {
+        font-size: 14px; /* Smaller text for tablets */
+    }
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 576px) {
+    .card {
+        max-width: 100%; /* Single card per row on mobile */
+    }
+
+    .card-text {
+        font-size: 14px; /* Slightly smaller text for mobile */
+    }
+
+    .card-group {
+        gap: 10px; /* Reduce gap between cards */
+        padding: 10px;
+    }
+}
+
+
+
+/* about section start */
+
+
+/* Main about section */
+.main-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+    gap: 20px; /* Add space between elements */
+    padding: 20px;
+}
+
+/* About image */
+.about-image img {
+    width: 100%;
+    max-width: 450px; /* Limit image size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+/* Inner about section */
+.inner-about {
+    width: 100%;
+    max-width: 600px; /* Limit text container size */
+}
+
+/* About heading */
+.about-heading h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* About text */
+.about-text p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .about-heading h2 {
+        font-size: 2rem; /* Smaller heading for tablets */
+    }
+
+    .about-text p {
+        font-size: 1rem; /* Smaller text for tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .main-about {
+        flex-direction: column; /* Stack items vertically on mobile */
+        text-align: center; /* Center-align text */
+    }
+
+    .inner-about {
+        margin: 0; /* Remove left margin */
+    }
+
+    .about-heading h2 {
+        font-size: 1.8rem; /* Adjust heading size for mobile */
+    }
+
+    .about-text p {
+        font-size: 0.9rem; /* Adjust text size for mobile */
+    }
+}
+
+
+/* about section end */
+
+ /* Feature Section */
+ .feature {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.feature h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+/* Card Group */
+.card-group-feature {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Wrap cards for smaller screens */
+    padding: 20px;
+}
+
+/* Card Feature */
+.card-feature {
+    flex: 1 1 300px; /* Allow cards to shrink and grow */
+    max-width: 300px; /* Limit the width */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.card-feature img {
+    width: 30%;
+    height: auto;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .feature h2 {
+        font-size: 2rem;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .feature h2 {
+        font-size: 1.8rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.85rem;
+    }
+}
+
+
+
+/* General Styling */
+.navbar {
+    padding: 20px;
+}
+
+.navbar h2 {
+    font-size: 35px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+/* Flexbox Layout for the form */
+.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Input field styling */
+.d-flex input {
+    border: none;
+    height: 40px;
+    flex: 1;
+    min-width: 200px; /* Ensures the input field has a minimum width */
+}
+
+/* Button styling */
+.btn-dark {
+    height: 40px;
+    padding: 0 15px;
+    margin-top: 5px;
+    flex-shrink: 0; /* Prevents the button from shrinking */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .d-flex {
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Makes the form take up full width on smaller screens */
+    }
+
+    .d-flex input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .btn-dark {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar h2 {
+        font-size: 20px;
+    }
+
+    .d-flex input {
+        width: 100%;
+    }
+
+    .btn-dark {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/* General Styling for Footer */
+.main-footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+.inner-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Styling for Footer Left Section */
+.footer-left {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-left-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    margin-right: 200px;
+}
+
+.footer-left-text {
+    text-align: center;
+}
+
+.footer-left-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Styling for Quick Menu and Resources */
+.quick, .resource {
+    flex: 1;
+    min-width: 150px;
+    /* margin-left: 200px; */
+}
+
+.quick h2, .resource h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.quick ul, .resource ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.quick li, .resource li {
+    margin-bottom: 8px;
+}
+
+.quick a, .resource a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.quick a:hover, .resource a:hover {
+    color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-left {
+        max-width: 100%;
+        align-items: flex-start;
+    }
+
+    .inner-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-left-image {
+        margin-bottom: 20px;
+    }
+
+    .quick, .resource {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .quick h2, .resource h2 {
+        font-size: 20px;
+    }
+
+    .footer-left-text p {
+        font-size: 14px;
+    }
+
+    .quick a, .resource a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quick a, .resource a {
+        font-size: 14px;
+    }
+
+    .footer-left-text p {
+        font-size: 13px;
+    }
+
+    .footer-left-image img {
+        width: 80%;  /* Reduces the image size on very small screens */
+        margin: 0 auto;
+    }
+
+    .inner-footer {
+        gap: 10px;
+    }
+}
